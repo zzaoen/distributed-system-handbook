@@ -7,13 +7,15 @@
 ~~Log Merge Tree~~
 
 ### 算法和协议
-~~Byzantine General问题~~
+~~Byzantine General~~
 
 ~~paxos~~
 
 ~~raft~~
 
 ~~MapReduce~~
+MapReduce: Simplified Data Processing on Large Clusters
+https://www12.informatik.uni-erlangen.de/edu/map/ss10/talks/MapReduce.pdf
 MapReduce: A major step backwards
 https://homes.cs.washington.edu/~billhowe/mapreduce_a_major_step_backwards.html
 
