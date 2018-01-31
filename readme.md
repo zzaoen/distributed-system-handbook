@@ -1,4 +1,4 @@
-# 关于分布式系统的学习
+# 分布式系统学习
 
 ## 1. 理论部分
 ### 数据结构
@@ -14,8 +14,10 @@
 ~~raft~~
 
 ~~MapReduce~~
+
 MapReduce: Simplified Data Processing on Large Clusters
 https://www12.informatik.uni-erlangen.de/edu/map/ss10/talks/MapReduce.pdf
+
 MapReduce: A major step backwards
 https://homes.cs.washington.edu/~billhowe/mapreduce_a_major_step_backwards.html
 
@@ -150,3 +152,5 @@ https://wenku.baidu.com/view/895a2a3467ec102de2bd8902?pcf=2#page/1/1375282274254
 
 [16] 用大白话聊聊分布式系统
 https://waylau.com/talk-about-distributed-system/
+
+[17]  《这就是搜索引擎--核心技术详解》
