@@ -2,12 +2,13 @@
 
 ## 1. 理论部分
 ### 数据结构
+
 ~~B-Tree~~
 
 ~~Log Merge Tree~~
 
 ### 算法和协议
-~~Byzantine General~~
+Byzantine General
 
 ~~paxos~~
 
@@ -16,12 +17,14 @@
 ~~MapReduce~~
 
 MapReduce: Simplified Data Processing on Large Clusters
+
 https://www12.informatik.uni-erlangen.de/edu/map/ss10/talks/MapReduce.pdf
 
 MapReduce: A major step backwards
+
 https://homes.cs.washington.edu/~billhowe/mapreduce_a_major_step_backwards.html
 
-~~CAP & BASE & ACID~~
+~~CAP-BASE-ACID~~
 
 ~~2PC & 3PC~~
 
@@ -47,25 +50,38 @@ https://homes.cs.washington.edu/~billhowe/mapreduce_a_major_step_backwards.html
 
 ## 3. 分布式键值系统
 ### memcached
-### ~~redis~~
+
+### redis
+
 ### Amazon Dynamo
+
 Dynamo: Amazon’s Highly Available Key-value Store
 http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
 ### Taobao Tair
 
 ## 4. 分布式文件系统
+
 ### GFS
 The Google File System
 http://www.eecg.toronto.edu/~ashvin/courses/ece1746/2003/reading/ghemawat-sosp03.pdf
 ### Taobao TFS
 ### Facebook Haystack
+
 ### ~~HDFS~~ almost finish
 
+### Ceph
+
+https://www.ssrc.ucsc.edu/Papers/weil-osdi06.pdf
+
+https://www.ibm.com/developerworks/cn/linux/l-ceph/index.html
+
 ## 5. 分布式表格系统
+
 ### Bigtable
 Bigtable: A Distributed Storage System for Structured Data
 http://lintool.github.io/UMD-courses/bigdata-2015-Spring/content/ChangFay_etal_OSDI2006.pdf
 ### ~~Megastore~~
+
 ### ~~Azure Storage~~
 
 
