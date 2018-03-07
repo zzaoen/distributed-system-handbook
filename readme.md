@@ -5,6 +5,16 @@
 
 B-Tree
 
+Log-structured Merge Tree
+
+merkle tree
+
+consistent hash
+
+vertor clock
+
+lock-free data structure
+
 ### 算法和协议
 
 Byzantine General
@@ -12,6 +22,12 @@ Byzantine General
 ~~paxos~~
 
 ~~raft~~
+
+北航云计算公开课，关于paxos
+http://blog.sina.com.cn/s/blog_46d0a3930101qt42.html
+raft和multi paxos对比
+https://ramcloud.stanford.edu/~ongaro/userstudy/
+
 
 ~~2PC & 3PC~~
 
@@ -41,6 +57,11 @@ MapReduce
 
 ~~Zookeeper~~
 
+### 集群监控
+~~The ganglia distributed monitoring system:design, implementation, and experience~~
+
+~~Chukwa: A large-scale monitoring system~~
+
 
 ## 3. 分布式键值系统
 ### memcached
@@ -52,6 +73,9 @@ MapReduce
 Dynamo: Amazon’s Highly Available Key-value Store
 http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
 ### Taobao Tair
+
+### Pegasus (小米的分布式键值)
+https://github.com/XiaoMi/pegasus
 
 ## 4. 分布式文件系统
 
@@ -182,3 +206,25 @@ https://www.andrew.cmu.edu/course/15-440-s13/index/lecture_index.html
      https://waylau.com/talk-about-distributed-system/
 
  - 《这就是搜索引擎--核心技术详解》
+
+# 参考
+别人的学习计划
+
+http://oserror.com/distributed/learning-distributed/
+
+知乎分布式系统邻域经典论文
+
+https://www.zhihu.com/question/30026369
+
+伊利诺伊大学的Advanced Distributed Systems 里把各个方向重要papers
+
+https://courses.engr.illinois.edu/cs525/sp2018/sched.htm
+
+
+cmu的reading list
+
+http://www.cs.cmu.edu/~dga/15-712/F13/syllabus.html
+
+分布式存储工程师
+https://www.zhihu.com/question/43687427/answer/96306564
+
