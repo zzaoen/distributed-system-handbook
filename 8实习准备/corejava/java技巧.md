@@ -19,40 +19,9 @@ for(int i : array)
 out.print(i);
 ```
 
-# 实例变量和局部变量
-实例变量是在class中定义的变量，属于实例对象。实例变量可以不初始化，系统会自动给它复赋值，比如数字为0，boolean为假，对象引用为null。而局部变量必须要初始化之后才可以使用。
 
-# 对象比较
-## Comparable
-每个类比较元素的规则应该是不同的，排序算法只应该调用类提供的比较方法，只要所有的类就调用什么方法达成一致，排序算法就能开始工作。
-如果一个类想启用对象排序，那么它应该实现Comparable接口。
-## Comparable接口有一个类型参数
-```
-public interface Comparable<T> {
-    public int compareTo(T o);
-}
-```
-在调用x.compareTo(y)的时候，返回值为负整数，说明x在y的前面；返回值为0，说明x和y是相等的；返回值为正整数，说明x在y的后面。
-```
-public class Employee implements Comparable<Employee> {
-    int id;
-    public int compareTo(Employee o) {
-        return this.id - o.id;
-    }
-    public static void main(String[] args){
-        Employee e1 = new Employee(); e1.id = 2;
-        Employee e2 = new Employee(); e2.id = 1;
-        Employee[] es = new Employee[]{e1, e2};
-        Arrays.sort(es);
-        //out.println(es[0].id);
-    }
-}
-```
-Arrays.sort方法可以对任何Comparable对象的数组进行排序。
-## Comparator
-对于String对象，我们不想按照字典顺序排序，但是我们也没有办法修改String的compareTo方法。Arrays.sort方法提供了一个办法，它接受一个实现了Comparator接口类的实例。
- 
 # Cool
+
 ```
 Map<String, Integer> map = new HashMap<>();
 map.put("alice", 1);
@@ -66,4 +35,70 @@ out.println(map);
 merge("alice", 1, Integer::sum)
 ```
 如果map中存在"alice"，会把之前的值加1，如果不存在，赋值为1。
+
+
+
+# 排序
+
+## Comparable
+
+一个对象数组，排序算法需要重复比较数组中的元素。不同的类比较元素的规则是不同的，但是排序算法只应该调用类提供的比较方法，只要所有的类就比较的时候提供的方法达成一致，那么排序算法就能开始工作。这个在排序时对象之间进行比较方法就可以是一个接口，所有需要比较的对象继承这个接口并且实现比较的方法，就可以对这些对象进行排序。
+
+如果一个类想启用对象排序，那么就应该实现Comparable接口。
+
+```java
+public class Test{
+	public static void main(String[] args){
+        Employee[] employees = new Employee[3];
+        employees[0] = new Employee(20);
+        employees[1] = new Employee(10);
+        employees[2] = new Employee(30);
+        Arrays.sort(employees);
+        for(Employee e : employees){
+        	System.out.println(e);
+        }
+	}
+	
+	static class Employee implements Comparable<Employee>{ //因为在main方法中实例化这个类，所以只能是static的
+        private int id;
+        public Employee(int id){this.id = id;}
+        @Override
+        public int compareTo(Employee o) {
+            return this.id - o.id;
+        }
+        @Override
+        public String toString() {
+            return "Employee{" + "id=" + id + '}';
+        }
+	}
+}
+
+```
+
+
+
+
+
+## Comparator
+
+假如想根据字符串的长度而不是根据字典顺序对字符串排序，但是String类我们是无法修改的。
+
+Arrays.sort方法和Collections.sort方法都提供了一个可以接收Comparator实例作为第二个参数的版本。
+
+要按照长度比较字符串，定义一个实现Comparator<String>的类。
+
+```java
+public class LengthComparator implements Comparator<String> {
+    @Override
+    public int compare(String o1, String o2) {
+    	return o1.length() - o2.length();
+    }
+    public static void main(String[] args){
+        String[] names = {"tom", "alice", "fred"};
+        Arrays.sort(names, new LengthComparator());
+        out.println(Arrays.toString(names));
+    }
+}
+
+```
 
