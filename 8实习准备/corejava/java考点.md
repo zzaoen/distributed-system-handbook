@@ -52,7 +52,7 @@ public class Person{
 }
 ```
 
-![52282135274](D:\a_my\OneDrive\1研究生同步\1学习记录\20180114-分布式学习计划\8实习准备\corejava\1522821352745.png)
+![52282135274](D:\a_my\OneDrive\1研究生同步\1学习记录\20180114-分布式学习计划\8实习准备\corejava\assets\1522821352745.png)
 
 给age加上了static关键字之后，age交给了Person类管理，对象不再拥有age属性。
 
