@@ -1,12 +1,5 @@
-
-# 格式化输出
-```
-out.printf("%,+.2f\n", 10000.0/3.0);
-String message = String.format("The averag number is: %,+.2f, total number: %d ", 10000.0/3, 10000);
-out.println(message);
-%d、%x、%o分别是10、16和8进制，没有2进制。
-```
 # 数组的复制
+
 ```
 int[] array = new int[]{1,2,3};
 int[] arrayCopy = array;
@@ -20,7 +13,10 @@ out.print(i);
 ```
 
 
+
 # Cool
+
+## 字典操作
 
 ```
 Map<String, Integer> map = new HashMap<>();
@@ -35,6 +31,22 @@ out.println(map);
 merge("alice", 1, Integer::sum)
 ```
 如果map中存在"alice"，会把之前的值加1，如果不存在，赋值为1。
+
+## 数组复制
+
+```java
+int[] array = new int[]{1,2,3};
+int[] arrayCopy = array;
+arrayCopy[2] = 30;
+for(int i : array)
+    out.print(i);
+int[] arrayDeepCopy = Arrays.copyOf(array, array.length);
+arrayDeepCopy[2] = 300;
+for(int i : array)
+    out.print(i)
+```
+
+
 
 
 
