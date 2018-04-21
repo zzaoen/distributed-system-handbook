@@ -52,7 +52,7 @@ public class Person{
 }
 ```
 
-![52282135274](D:\a_my\OneDrive\1研究生同步\1学习记录\20180114-分布式学习计划\8实习准备\corejava\1522821352745.png)
+![52282135274](D:\a_my\OneDrive\1研究生同步\1学习记录\20180114-分布式学习计划\8实习准备\corejava\assets\1522821352745.png)
 
 给age加上了static关键字之后，age交给了Person类管理，对象不再拥有age属性。
 
@@ -210,6 +210,8 @@ int k; public synchronized int getK(){return k};
 ```
 
 getI调用获取的是**当前线程中的副本**，这个值不一定是最新的值。j是volatile修饰的，对于JVM来说这个变量不会有线程的本地副本，只会放在主存中，所以得到的一定是最新的。getK是synchronized修饰的，保证线程的本地副本和主存的同步，所以也会得到最新的值。
+
+需要注意的是：**volatile仅仅解决了可见性的问题，但是它并不能保证互斥性。当多个线程修改某个volatile变量时，依旧会产生多线程的问题。**
 
 
 
